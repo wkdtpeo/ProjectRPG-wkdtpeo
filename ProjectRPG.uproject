@@ -1,0 +1,13 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{EEEBD7B2-47B5-8E2E-CDCC-C382C1C30184}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "ProjectRPG",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
