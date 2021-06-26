@@ -3,6 +3,7 @@
  
  소스코드는 Git으로 관리하며, 리소스는 SVN으로 관리하도록 프로젝트 구축하였습니다.
  
+ Unreal Ver. 4.26.2
  
  Source(Git) : https://github.com/wkdtpeo/ProjectRPG-wkdtpeo.git
  
