@@ -4,7 +4,7 @@
 
 #include "../../ProjectRPG.h"
 #include "GameFramework/Pawn.h"
-#include "MyPawn.generated.h"
+#include "PR_MyPawn.generated.h"
 
 /**
 * Pawn 클래스는 플레이어나 AI 가 제어할 수 있는 모든 액터의 베이스 클래스입니다. 
@@ -26,13 +26,13 @@
 **/
 
 UCLASS()
-class PROJECTRPG_API AMyPawn : public APawn
+class PROJECTRPG_API APR_MyPawn : public APawn
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this pawn's properties
-	AMyPawn();
+	APR_MyPawn();
 
 protected:
 	// Called when the game starts or when spawned

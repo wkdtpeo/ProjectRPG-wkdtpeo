@@ -4,7 +4,7 @@
 
 #include "../../ProjectRPG.h"
 #include "GameFramework/Character.h"
-#include "MyCharacter.generated.h"
+#include "PR_MyCharacter.generated.h"
 
 /**
 * CharacterMovementComponent, CapsuleComponent,SkeletalMeshComponent 의 추가를 통해 
@@ -15,13 +15,13 @@
 **/
 
 UCLASS()
-class PROJECTRPG_API AMyCharacter : public ACharacter
+class PROJECTRPG_API APR_MyCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this character's properties
-	AMyCharacter();
+	APR_MyCharacter();
 
 protected:
 	// Called when the game starts or when spawned

@@ -4,7 +4,7 @@
 
 #include "../../ProjectRPG.h"
 #include "GameFramework/PlayerController.h"
-#include "MyPlayerController.generated.h"
+#include "PR_MyPlayerController.generated.h"
 
 /**
  * 플레이어 컨트롤러는 인간 플레이어가 폰을 제어하는 ​​데 사용됩니다.
@@ -13,7 +13,7 @@
  * 네트워크의 다른 곳에서 원격 플레이어가 제어하는 ​​폰용 클라이언트 머신에는 존재하지 않습니다.
  */
 UCLASS()
-class PROJECTRPG_API AMyPlayerController : public APlayerController
+class PROJECTRPG_API APR_MyPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 	

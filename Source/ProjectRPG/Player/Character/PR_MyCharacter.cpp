@@ -1,10 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "MyCharacter.h"
+#include "PR_MyCharacter.h"
 
 // Sets default values
-AMyCharacter::AMyCharacter()
+APR_MyCharacter::APR_MyCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -18,32 +18,32 @@ AMyCharacter::AMyCharacter()
 }
 
 // Called when the game starts or when spawned
-void AMyCharacter::BeginPlay()
+void APR_MyCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
 }
 
 // Called every frame
-void AMyCharacter::Tick(float DeltaTime)
+void APR_MyCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
 }
 
 // Called to bind functionality to input
-void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+void APR_MyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 }
 
-void AMyCharacter::UpDown(float NewAxisValue)
+void APR_MyCharacter::UpDown(float NewAxisValue)
 {
 
 }
 
-void AMyCharacter::LeftRight(float NewAxisValue)
+void APR_MyCharacter::LeftRight(float NewAxisValue)
 {
 
 }
