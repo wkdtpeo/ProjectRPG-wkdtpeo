@@ -1,21 +1,21 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "PR_GameMode_Interface.h"
+#include "PR_GameMode_Base.h"
 
-APR_GameMode_Interface::APR_GameMode_Interface()
+APR_GameMode_Base::APR_GameMode_Base()
 {
 
 }
 
-void APR_GameMode_Interface::BeginPlay()
+void APR_GameMode_Base::BeginPlay()
 {
 	Super::BeginPlay();
 
 	TableCheck();
 }
 
-bool APR_GameMode_Interface::TableCheck()
+bool APR_GameMode_Base::TableCheck()
 {
 	bool bRet = true;
 	if (nullptr == CharacterCameraTable)

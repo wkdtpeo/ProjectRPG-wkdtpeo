@@ -3,14 +3,14 @@
 #pragma once
 
 #include "../ProjectRPG.h"
-#include "PR_GameMode_Interface.h"
+#include "PR_GameMode_Base.h"
 #include "PR_GameMode_BattleStage.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class PROJECTRPG_API APR_GameMode_BattleStage : public APR_GameMode_Interface
+class PROJECTRPG_API APR_GameMode_BattleStage : public APR_GameMode_Base
 {
 	GENERATED_BODY()
 	
