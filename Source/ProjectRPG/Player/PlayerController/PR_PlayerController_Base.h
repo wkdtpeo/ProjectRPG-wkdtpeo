@@ -36,11 +36,16 @@ protected:
 	virtual void SetupInputComponent() override;
 
 public :
+	//--------------------------------------------
+	// Inputs
+	//--------------------------------------------
 	void UpDown(float NewAxisValue);
 	void LeftRight(float NewAxisValue);
 	void RotateCamera(float NewAxisValue);
 	void ChangePitch(float NewAxisValue);
 
+
+
 protected :
-	FVector	vDirectionToMove = FVector::ZeroVector;		// 캐릭터 이동방향 Vector
+	//FVector	vDirectionToMove = FVector::ZeroVector;		// 캐릭터 이동방향 Vector
 };

@@ -42,20 +42,36 @@ void APR_PlayerController_Base::SetupInputComponent()
 
 void APR_PlayerController_Base::UpDown(float NewAxisValue)
 {
-	vDirectionToMove.Y = -NewAxisValue;
+	//vDirectionToMove.Y = -NewAxisValue;
+	
+	APawn* pPawn = GetPawn();
+	ABCHECK(pPawn);
+
+	pPawn->AddMovementInput(pPawn->GetActorForwardVector(), NewAxisValue);
 }
 
 void APR_PlayerController_Base::LeftRight(float NewAxisValue)
 {
-	vDirectionToMove.X = NewAxisValue;
+	//vDirectionToMove.X = NewAxisValue;
+
+	APawn* pPawn = GetPawn();
+	ABCHECK(pPawn);
+	
+	pPawn->AddMovementInput(pPawn->GetActorRightVector(), NewAxisValue);
 }
 
 void APR_PlayerController_Base::RotateCamera(float NewAxisValue)
 {
+	APawn* pPawn = GetPawn();
+	ABCHECK(pPawn);
 
+	pPawn->AddControllerYawInput(NewAxisValue);
 }
 
 void APR_PlayerController_Base::ChangePitch(float NewAxisValue)
 {
+	//APawn* pPawn = GetPawn();
+	//ABCHECK(pPawn);
 
+	//pPawn->AddControllerPitchInput(NewAxisValue);
 }
