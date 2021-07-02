@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
+#include "../../ProjectRPG.h"
 #include "Animation/AnimInstance.h"
 #include "PR_MyAnimInstance.generated.h"
 
