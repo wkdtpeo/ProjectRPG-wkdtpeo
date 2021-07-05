@@ -4,6 +4,7 @@
 
 #include "../../ProjectRPG.h"
 #include "GameFramework/Character.h"
+#include "../AnimInstance/PR_MyAnimInstance.h"
 #include "PR_MyCharacter.generated.h"
 
 /**
@@ -26,6 +27,7 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	virtual void PostInitializeComponents() override;
 
 public:	
 	// Called every frame
@@ -35,14 +37,19 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 public :
-	UPROPERTY(VisibleAnywhere, Category = Camera)
-	USpringArmComponent* SpringArm;
+	UPROPERTY(VisibleAnywhere, Category = "Camera")
+	USpringArmComponent* m_pSpringArm;
 
-	UPROPERTY(VisibleAnywhere, Category = Camera)
-	UCameraComponent* Camera;
+	UPROPERTY(VisibleAnywhere, Category = "Camera")
+	UCameraComponent* m_pCamera;
 
-private :
-	void UpDown(float NewAxisValue);
-	void LeftRight(float NewAxisValue);
+	UPROPERTY(VisibleAnywhere, Category = "AnimInstance")
+	class UPR_MyAnimInstance* m_pMyAnimInstance;
 
+public :
+	//--------------------------------------------
+	// Key Inputs
+	//--------------------------------------------
+	void OnUpDown(float NewAxisValue);
+	void OnLeftRight(float NewAxisValue);
 };

@@ -14,4 +14,9 @@ class PROJECTRPG_API UPR_MyAnimInstance : public UAnimInstance
 {
 	GENERATED_BODY()
 	
+public :
+	// 뒤로 가기 키 입력 (S)
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnBackStepKey(bool bPressed);
+	
 };

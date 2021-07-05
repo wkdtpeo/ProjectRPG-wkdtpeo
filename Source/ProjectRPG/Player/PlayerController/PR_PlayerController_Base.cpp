@@ -2,6 +2,7 @@
 
 
 #include "PR_PlayerController_Base.h"
+#include "../Character/PR_MyCharacter.h"
 
 APR_PlayerController_Base::APR_PlayerController_Base()
 {
@@ -42,22 +43,16 @@ void APR_PlayerController_Base::SetupInputComponent()
 
 void APR_PlayerController_Base::UpDown(float NewAxisValue)
 {
-	//vDirectionToMove.Y = -NewAxisValue;
-	
-	APawn* pPawn = GetPawn();
-	ABCHECK(pPawn);
-
-	pPawn->AddMovementInput(pPawn->GetActorForwardVector(), NewAxisValue);
+	auto pMyCharacter = Cast<APR_MyCharacter>(GetPawn());
+	if (pMyCharacter)
+		pMyCharacter->OnUpDown(NewAxisValue);
 }
 
 void APR_PlayerController_Base::LeftRight(float NewAxisValue)
 {
-	//vDirectionToMove.X = NewAxisValue;
-
-	APawn* pPawn = GetPawn();
-	ABCHECK(pPawn);
-	
-	pPawn->AddMovementInput(pPawn->GetActorRightVector(), NewAxisValue);
+	auto pMyCharacter = Cast<APR_MyCharacter>(GetPawn());
+	if (pMyCharacter)
+		pMyCharacter->OnLeftRight(NewAxisValue);
 }
 
 void APR_PlayerController_Base::RotateCamera(float NewAxisValue)
