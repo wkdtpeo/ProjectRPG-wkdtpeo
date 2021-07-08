@@ -51,10 +51,14 @@ void APR_MyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 
 void APR_MyCharacter::OnUpDown(float NewAxisValue)
 {
-	if (m_pMyAnimInstance)
+	if (m_pMyAnimInstance && NewAxisValue != 0.0f)
 	{
 		bool bBackStep = NewAxisValue < 0.0f;
-		m_pMyAnimInstance->OnBackStepKey(bBackStep);
+		if (m_bBackStep != bBackStep)
+		{
+			m_bBackStep = bBackStep;
+			m_pMyAnimInstance->OnBackStepKey(bBackStep);
+		}
 	}
 
 	AddMovementInput(GetActorForwardVector(), NewAxisValue);

@@ -46,6 +46,9 @@ public :
 	UPROPERTY(VisibleAnywhere, Category = "AnimInstance")
 	class UPR_MyAnimInstance* m_pMyAnimInstance;
 
+private :
+	bool m_bBackStep = false;
+
 public :
 	//--------------------------------------------
 	// Key Inputs
